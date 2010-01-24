@@ -1,14 +1,15 @@
 %define fname Mail-SpamAssassin-rules
+%define svn_snap r901671
 
 Summary:	Rules for SpamAssassin
 Name:		spamassassin-rules
 Version:	3.3.0
-Release:	%mkrel 0.1
+Release:	%mkrel 0.1.%{svn_snap}.1
 License:	Apache License
 Group:		Networking/Mail
 URL:		http://spamassassin.org/
-Source0:	http://www.apache.org/dist/spamassassin/source/%{fname}-%{version}.tgz
-Source1:	http://www.apache.org/dist/spamassassin/source/%{fname}-%{version}.tgz.asc
+Source0:	http://www.apache.org/dist/spamassassin/source/%{fname}-%{version}.%{svn_snap}.tgz
+Source1:	http://www.apache.org/dist/spamassassin/source/%{fname}-%{version}.%{svn_snap}.tgz.asc
 Requires:	spamassassin >= 3.3.0
 Conflicts:	spamassassin < 3.3.0
 BuildArch:	noarch
@@ -35,4 +36,3 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %attr(0644,root,root) %{_datadir}/spamassassin/*.cf
-
