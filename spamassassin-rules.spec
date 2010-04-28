@@ -4,7 +4,7 @@
 Summary:	Rules for SpamAssassin
 Name:		spamassassin-rules
 Version:	3.3.0
-Release:	%mkrel 0.1.%{svn_snap}.1
+Release:	%mkrel 0.1.%{svn_snap}.2
 License:	Apache License
 Group:		Networking/Mail
 URL:		http://spamassassin.org/
@@ -17,6 +17,10 @@ Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 This package contains the default rules for SpamAssassin.
+
+WARNING: These rules may be old at install time. This package is NOT
+supported by Mandriva. You should immediately update your rules set as
+explained in the official SpamAssassin documentations.
 
 %prep
 
