@@ -10,7 +10,7 @@ Group:		Networking/Mail
 URL:		http://spamassassin.org/
 Source0:	http://www.apache.org/dist/spamassassin/source/%{fname}-%{version}.%{svn_snap}.tgz
 Source1:	http://www.apache.org/dist/spamassassin/source/%{fname}-%{version}.%{svn_snap}.tgz.asc
-Requires:	spamassassin >= %{version}
+Requires:	spamassassin > 3.3.0
 Conflicts:	spamassassin < 3.3.0
 BuildArch:	noarch
 Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
