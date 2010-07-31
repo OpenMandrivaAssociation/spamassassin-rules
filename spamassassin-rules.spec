@@ -4,7 +4,7 @@
 Summary:	Rules for SpamAssassin
 Name:		spamassassin-rules
 Version:	3.3.1
-Release:	%mkrel 0.1.%{svn_snap}.1
+Release:	%mkrel 0.1.%{svn_snap}.2
 License:	Apache License
 Group:		Networking/Mail
 URL:		http://spamassassin.org/
