@@ -1,17 +1,14 @@
-%define fname Mail-SpamAssassin-rules
-%define svn_snap r923257
-
 Summary:	Rules for SpamAssassin
 Name:		spamassassin-rules
 Version:	3.3.1
-Release:	%mkrel 0.1.%{svn_snap}.1
+Release:	%mkrel 0.20101015.1
 License:	Apache License
 Group:		Networking/Mail
 URL:		http://spamassassin.org/
-Source0:	http://www.apache.org/dist/spamassassin/source/%{fname}-%{version}.%{svn_snap}.tgz
-Source1:	http://www.apache.org/dist/spamassassin/source/%{fname}-%{version}.%{svn_snap}.tgz.asc
 Requires:	spamassassin > 3.3.0
 Conflicts:	spamassassin < 3.3.0
+Buildrequires:	spamassassin
+Buildrequires:	gnupg
 BuildArch:	noarch
 Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
@@ -24,7 +21,8 @@ explained in the official SpamAssassin documentations.
 
 %prep
 
-%setup -q -c -T -n %{fname}-%{version} -a0
+%setup -q -c -T -n %{name}-%{version}
+sa-update --gpghomedir . --channel updates.spamassassin.org --updatedir .
 
 %build
 
@@ -32,7 +30,7 @@ explained in the official SpamAssassin documentations.
 rm -rf %{buildroot}
 
 install -d %{buildroot}%{_datadir}/spamassassin
-install -m0644 *.cf %{buildroot}%{_datadir}/spamassassin
+install -m0644 updates_spamassassin_org/*.cf %{buildroot}%{_datadir}/spamassassin
 
 %clean
 rm -rf %{buildroot}
