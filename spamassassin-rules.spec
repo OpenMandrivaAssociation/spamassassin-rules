@@ -9,6 +9,30 @@ Requires:	spamassassin > 3.3.0
 Conflicts:	spamassassin < 3.3.0
 Buildrequires:	spamassassin
 Buildrequires:	gnupg
+Buildrequires:	perl(Digest::SHA1)
+Buildrequires:	perl(HTML::Parser)
+Buildrequires:	perl(Net::DNS)
+Buildrequires:	perl(NetAddr::IP)
+Buildrequires:	perl(Time::HiRes)
+Buildrequires:	perl(Archive::Tar)
+Buildrequires:	perl(IO::Zlib)
+Buildrequires:	perl(Digest::SHA1)
+Buildrequires:	perl(MIME::Base64)
+Buildrequires:	perl(DB_File)
+Buildrequires:	perl(Net::SMTP)
+Buildrequires:	perl(Mail::SPF)
+Buildrequires:	perl(IP::Country::Fast)
+Buildrequires:	perl(Razor2::Client::Agent)
+Buildrequires:	perl(Net::Ident)
+Buildrequires:	perl(IO::Socket::INET6)
+Buildrequires:	perl(IO::Socket::SSL)
+Buildrequires:	perl(Compress::Zlib)
+Buildrequires:	perl(Mail::DKIM)
+Buildrequires:	perl(DBI)
+Buildrequires:	perl(Getopt::Long)
+Buildrequires:	perl(LWP::UserAgent)
+Buildrequires:	perl(HTTP::Date)
+Buildrequires:	perl(Encode::Detect)
 BuildArch:	noarch
 
 %description
