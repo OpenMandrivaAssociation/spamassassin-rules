@@ -21,7 +21,7 @@ explained in the official SpamAssassin documentations.
 %prep
 
 %setup -q -c -T -n %{name}-%{version}
-sa-update --gpghomedir . --channel updates.spamassassin.org --updatedir .
+sa-update --debug --gpghomedir . --channel updates.spamassassin.org --updatedir .
 
 %build
 
