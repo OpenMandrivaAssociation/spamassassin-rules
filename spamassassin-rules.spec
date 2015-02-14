@@ -1,12 +1,14 @@
+%define svn_ver r1565117
 Summary:	Rules for SpamAssassin
 Name:		spamassassin-rules
 Version:	3.4.0
-Release:	1
+Release:	1.%{svn_ver}.1
 License:	Apache License
 Group:		Networking/Mail
 URL:		http://spamassassin.apache.org/
 Requires:	spamassassin > 3.4.0
 Conflicts:	spamassassin < 3.4.0
+Source0:        Mail-SpamAssassin-rules-%{version}.%{svn_ver}.tgz
 Buildrequires:	spamassassin
 Buildrequires:	gnupg
 BuildArch:	noarch
@@ -21,8 +23,7 @@ explained in the official SpamAssassin documentations.
 
 %prep
 
-%setup -q -c -T -n %{name}-%{version}
-sa-update --gpghomedir . --channel updates.spamassassin.org --updatedir .
+%setup -q -c -n %{name}-%{version}
 
 %build
 
@@ -30,7 +31,7 @@ sa-update --gpghomedir . --channel updates.spamassassin.org --updatedir .
 rm -rf %{buildroot}
 
 install -d %{buildroot}%{_datadir}/spamassassin
-install -m0644 updates_spamassassin_org/*.cf %{buildroot}%{_datadir}/spamassassin
+install -m0644 *.cf %{buildroot}%{_datadir}/spamassassin
 
 %clean
 rm -rf %{buildroot}
