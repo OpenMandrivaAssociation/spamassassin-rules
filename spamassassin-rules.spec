@@ -2,7 +2,7 @@
 Summary:	Rules for SpamAssassin
 Name:		spamassassin-rules
 Version:	3.4.0
-Release:	1.%{svn_ver}.2
+Release:	1.%{svn_ver}.3
 License:	Apache License
 Group:		Networking/Mail
 URL:		http://spamassassin.apache.org/
