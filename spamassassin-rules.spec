@@ -9,7 +9,7 @@ URL:		http://spamassassin.apache.org/
 Requires:	spamassassin >= 3.4.0
 Conflicts:	spamassassin < 3.4.0
 Source0:	Mail-SpamAssassin-rules-%{version}.%{svn_ver}.tgz
-BuildRequires:	spamassassin >= 3.4.0
+#BuildRequires:	spamassassin >= 3.4.0
 BuildRequires:	gnupg
 BuildArch:	noarch
 
