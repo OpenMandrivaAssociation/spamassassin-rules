@@ -1,8 +1,8 @@
-%define svn_ver r1565117
+%define svn_ver r1840640
 Summary:	Rules for SpamAssassin
 Name:		spamassassin-rules
-Version:	3.4.0
-Release:	1.%{svn_ver}.3
+Version:	3.4.2
+Release:	1.%{svn_ver}
 License:	Apache License
 Group:		Networking/Mail
 URL:		http://spamassassin.apache.org/
