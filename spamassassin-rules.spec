@@ -5,7 +5,7 @@ Version:	3.4.2
 Release:	1.%{svn_ver}
 License:	Apache License
 Group:		Networking/Mail
-URL:		http://spamassassin.apache.org/
+URL:		https://spamassassin.apache.org/
 Requires:	spamassassin >= 3.4.0
 Conflicts:	spamassassin < 3.4.0
 Source0:	Mail-SpamAssassin-rules-%{version}.%{svn_ver}.tgz
